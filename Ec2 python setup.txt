@@ -1,0 +1,39 @@
+# Install virtualenv if not already installed
+sudo apt install python3-venv -y
+
+# Create a virtual environment
+python3 -m venv airflow-venv
+
+# Activate the virtual environment
+source airflow-venv/bin/activate
+
+# Install Airflow inside the virtual environment
+pip install apache-airflow
+
+# Run Airflow (while the virtual environment is active)
+airflow version
+
+#start airflow
+airflow standalone
+
+#if airflow does not run try 
+pkill -f "airflow"
+
+
+#to locate path
+command --> locate airflow.cfg
+
+#there might be two similar file but choose the file in the below path 
+target path /home/ubuntu/airflow/airflow.cfg
+
+
+#create folder ex{twitter_dags}
+mkdir twitter_dags
+
+#edit the airflow.cfg
+sudo nano airflow.cdg
+dags_folder = /home/ubuntu/airflow/dags  to dags_folder = /home/ubuntu/airflow/twitter_dags 
+
+#upload your DAGS here 
+
+#Install your required packages to run your python script inside virtual env
