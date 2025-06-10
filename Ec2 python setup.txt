@@ -4,6 +4,10 @@ sudo apt install python3-venv -y
 # Create a virtual environment
 python3 -m venv airflow-venv
 
+#before activating venv
+sudo su
+cd /home/ubuntu/
+
 # Activate the virtual environment
 source airflow-venv/bin/activate
 
