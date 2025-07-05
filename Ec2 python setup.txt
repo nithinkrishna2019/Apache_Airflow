@@ -1,3 +1,6 @@
+#login to serever
+ssh -i "apache_airflow_pj.pem" ubuntu@publicDNS
+
 # Install virtualenv if not already installed
 sudo apt install python3-venv -y
 
